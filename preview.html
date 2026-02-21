@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yicheng Ke | Resume Preview</title>
+    <style>
+      :root {
+        --surface: #f3f6fb;
+        --panel: #ffffff;
+        --ink: #101828;
+        --muted: #475467;
+        --stroke: #d7deea;
+        --accent: #1d4ed8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 10% 0%, rgba(29, 78, 216, 0.09), transparent 30%),
+          radial-gradient(circle at 95% 10%, rgba(16, 24, 40, 0.07), transparent 25%),
+          var(--surface);
+        color: var(--ink);
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .page {
+        margin: 0 auto;
+        min-height: 100vh;
+        width: 100%;
+        max-width: 1120px;
+        padding: 28px 18px;
+      }
+
+      .resume {
+        overflow: hidden;
+        border: 1px solid var(--stroke);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: 0 12px 36px rgba(16, 24, 40, 0.08);
+      }
+
+      .resume-grid {
+        display: grid;
+        grid-template-columns: 340px 1fr;
+      }
+
+      .sidebar {
+        background: rgba(255, 255, 255, 0.7);
+        border-right: 1px solid var(--stroke);
+      }
+
+      .section {
+        padding: 20px 24px;
+        border-top: 1px solid var(--stroke);
+      }
+
+      .section:first-child {
+        border-top: 0;
+        padding-top: 28px;
+        padding-bottom: 24px;
+      }
+
+      .avatar-wrap {
+        width: 112px;
+        height: 112px;
+        border-radius: 999px;
+        border: 2px solid rgba(29, 78, 216, 0.4);
+        padding: 3px;
+      }
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 999px;
+        object-fit: cover;
+        display: block;
+      }
+
+      h1 {
+        margin: 14px 0 0;
+        font-size: 48px;
+        line-height: 1.1;
+      }
+
+      .role {
+        margin-top: 8px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .contact {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .contact a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+
+      .title {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .chips {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        border: 1px solid var(--stroke);
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .muted {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .sidebar-list {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .award {
+        margin-top: 10px;
+        border: 1px solid var(--stroke);
+        border-radius: 10px;
+        padding: 12px;
+      }
+
+      .year {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .award h4 {
+        margin: 6px 0 0;
+        font-size: 16px;
+        line-height: 1.45;
+      }
+
+      .main {
+        padding: 26px 30px;
+      }
+
+      .badge {
+        display: inline-block;
+        border-radius: 999px;
+        border: 1px solid rgba(29, 78, 216, 0.2);
+        background: rgba(29, 78, 216, 0.1);
+        color: var(--accent);
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .summary {
+        margin: 14px 0 0;
+        max-width: 760px;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 18px;
+      }
+
+      .main-section {
+        margin-top: 26px;
+        border-top: 1px solid var(--stroke);
+        padding-top: 22px;
+      }
+
+      .period {
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .item {
+        margin-top: 14px;
+      }
+
+      .item h3 {
+        margin: 6px 0 10px;
+        font-size: 34px;
+        line-height: 1.2;
+      }
+
+      .item ul {
+        margin: 0;
+        padding-left: 22px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.62;
+      }
+
+      .paper-box {
+        margin-top: 14px;
+        border: 1px solid var(--stroke);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 16px;
+      }
+
+      .paper-box h3 {
+        margin: 8px 0 0;
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      .paper-box p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .main-list {
+        margin: 12px 0 0;
+        padding-left: 22px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 980px) {
+        .resume-grid {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          border-right: 0;
+          border-bottom: 1px solid var(--stroke);
+        }
+        h1 {
+          font-size: 40px;
+        }
+        .summary {
+          font-size: 18px;
+        }
+        .item h3,
+        .paper-box h3 {
+          font-size: 24px;
+        }
+        .item ul,
+        .paper-box p,
+        .main-list {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="resume">
+        <div class="resume-grid">
+          <aside class="sidebar">
+            <section class="section">
+              <div class="avatar-wrap">
+                <img class="avatar" src="./public/avatar.jpg" alt="Yicheng Ke avatar" />
+              </div>
+              <h1>Yicheng Ke</h1>
+              <div class="role">Undergraduate Student in Microelectronics</div>
+              <div class="contact">
+                <div>Changsha, Hunan, China</div>
+                <div>18773152670</div>
+                <div><a href="mailto:keych@mail2.sysu.edu.cn">keych@mail2.sysu.edu.cn</a></div>
+                <div><a href="mailto:3330870783@qq.com">3330870783@qq.com</a></div>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="title">Skills</h2>
+              <div class="chips">
+                <span class="chip">Python</span>
+                <span class="chip">C</span>
+                <span class="chip">MATLAB</span>
+                <span class="chip">Verilog-A</span>
+                <span class="chip">Cadence</span>
+                <span class="chip">Monte Carlo Statistical Modeling</span>
+                <span class="chip">Device-Circuit Co-Simulation</span>
+                <span class="chip">Technical Writing (Chinese & English)</span>
+                <span class="chip">PyTorch (Basic)</span>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="title">Education</h2>
+              <div class="muted" style="margin-top: 12px">
+                <p style="margin: 0; color: var(--ink); font-weight: 600">
+                  B.Eng. in Microelectronics Science and Technology
+                </p>
+                <p style="margin: 5px 0 0">
+                  Sun Yat-sen University, School of Microelectronics Science and
+                  Engineering
+                </p>
+                <p style="margin: 5px 0 0">Sep 2024 - Present</p>
+                <p style="margin: 5px 0 0">Major Ranking: 31/156 (Top ~19%)</p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="title">Honors</h2>
+              <article class="award">
+                <div class="year">2025</div>
+                <h4>
+                  Provincial First Prize, National College Mathematical Modeling Contest
+                  (Higher Education Cup)
+                </h4>
+              </article>
+            </section>
+
+            <section class="section">
+              <h2 class="title">Research Focus</h2>
+              <ul class="sidebar-list">
+                <li>Ferroelectric memory device modeling (FeFET/2FeFET)</li>
+                <li>TCAM bit-cell search reliability and failure analysis</li>
+                <li>3D NAND temperature-radiation coupled reliability</li>
+                <li>Cross-scale mapping from device variation to circuit-level behavior</li>
+              </ul>
+            </section>
+          </aside>
+
+          <main class="main">
+            <span class="badge">Open to internships and research opportunities</span>
+            <p class="summary">
+              I am a 2024-cohort undergraduate at Sun Yat-sen University focusing on
+              device modeling, reliability analysis, and device-circuit co-simulation for
+              emerging memory technologies.
+            </p>
+
+            <section class="main-section">
+              <h2 class="title">Research Experience</h2>
+              <article class="item">
+                <div class="period">2025 - Present</div>
+                <h3>Student Researcher (First Author) - FeFET-Based TCAM Manuscript</h3>
+                <ul>
+                  <li>
+                    Working on a manuscript related to FeFET-based TCAM reliability, currently
+                    under review.
+                  </li>
+                  <li>
+                    Built and tested simulation workflows and supported experiment analysis.
+                  </li>
+                  <li>
+                    Contributed to model updates, figures, and paper writing.
+                  </li>
+                </ul>
+              </article>
+
+              <article class="item">
+                <div class="period">Jul 2025 - Present</div>
+                <h3>Research Participant - Advanced 3D NAND Reliability Project</h3>
+                <ul>
+                  <li>
+                    Participating in reliability modeling work for advanced 3D NAND devices.
+                  </li>
+                  <li>
+                    Assisting with threshold-voltage data analysis across multiple
+                    temperature points.
+                  </li>
+                  <li>
+                    Exploring temperature and radiation effects on device behavior.
+                  </li>
+                </ul>
+              </article>
+            </section>
+
+            <section class="main-section">
+              <h2 class="title">Selected Publication</h2>
+              <article class="paper-box">
+                <div class="year">Project-Corresponding Manuscript | Under Review | 2025</div>
+                <h3>
+                  Manuscript Supporting the FeFET-TCAM Reliability Project
+                </h3>
+                <p>
+                  This manuscript is prepared as the corresponding paper for the
+                  project and is currently under review. Full title and technical
+                  details will be disclosed after publication.
+                </p>
+              </article>
+            </section>
+
+            <section class="main-section">
+              <h2 class="title">Additional Information</h2>
+              <ul class="main-list">
+                <li>
+                  Able to write technical documents in both Chinese and English.
+                </li>
+                <li>
+                  Familiar with Verilog-A model editing and device-circuit co-simulation.
+                </li>
+                <li>
+                  Comfortable using Cadence tools for simulation tasks.
+                </li>
+              </ul>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
