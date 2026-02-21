@@ -15,9 +15,9 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Carter | Resume Platform",
+  title: "Yicheng Ke | Resume Platform",
   description:
-    "English personal resume platform with professional experience, projects, and skills.",
+    "English personal resume website for Yicheng Ke with research, skills, and education.",
 };
 
 export default function RootLayout({

@@ -67,6 +67,8 @@ export default function Home() {
     "Cross-scale mapping from device variation to circuit-level behavior",
   ];
 
+  const avatarSrc = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/avatar.jpg`;
+
   return (
     <div className="mx-auto min-h-screen w-full max-w-6xl px-4 py-8 md:px-8 md:py-10">
       <div className="overflow-hidden rounded-2xl border border-stroke bg-panel shadow-[0_12px_36px_rgba(16,24,40,0.08)]">
@@ -75,7 +77,7 @@ export default function Home() {
             <section className="p-6 md:p-8">
               <div className="inline-flex rounded-full border-2 border-accent/40 p-1 shadow-sm">
                 <Image
-                  src="/avatar.jpg"
+                  src={avatarSrc}
                   alt="Yicheng Ke avatar"
                   width={108}
                   height={108}
@@ -83,10 +85,10 @@ export default function Home() {
                   priority
                 />
               </div>
-              <h1 className="mt-4 font-serif text-4xl leading-tight text-ink">
+              <h1 className="mt-4 font-serif text-5xl font-bold leading-tight text-ink">
                 {profile.name}
               </h1>
-              <p className="mt-2 text-lg font-medium text-ink/90">{profile.role}</p>
+              <p className="mt-2 text-xl font-semibold text-ink/90">{profile.role}</p>
               <div className="mt-4 space-y-1.5 text-sm leading-relaxed text-muted">
                 <p>{profile.location}</p>
                 <p>{profile.phone}</p>
@@ -184,7 +186,7 @@ export default function Home() {
                 {experience.map((item) => (
                   <article key={`${item.company}-${item.period}`} className="space-y-2">
                     <p className="text-sm font-semibold text-accent">{item.period}</p>
-                    <h3 className="text-2xl font-semibold leading-tight text-ink">
+                    <h3 className="text-[2.1rem] font-bold leading-tight text-ink">
                       {item.role} - {item.company}
                     </h3>
                     <ul className="list-disc space-y-1.5 pl-5 text-base leading-relaxed text-muted">
@@ -205,7 +207,7 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                   Project-Corresponding Manuscript | Under Review | 2025
                 </p>
-                <h3 className="mt-2 text-2xl font-semibold leading-tight text-ink">
+                <h3 className="mt-2 text-[2rem] font-bold leading-tight text-ink">
                   Manuscript Supporting the FeFET-TCAM Reliability Project
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-muted">
