@@ -67,6 +67,41 @@ export default function Home() {
     "Cross-scale mapping from device variation to circuit-level behavior",
   ];
 
+  const publications = [
+    {
+      venue: "TDMR",
+      status: "Under Review",
+      year: "2025",
+      title: "FeFET-TCAM Reliability Manuscript",
+      summary:
+        "Corresponding project manuscript focused on reliability behavior in FeFET-TCAM cells, including model refinement, simulation verification, and failure-mode analysis.",
+    },
+    {
+      venue: "EDL",
+      status: "Submitted",
+      year: "2026",
+      title: "Physics-Constrained Model for 3D NAND Vth Mean/Sigma at Extreme Temperatures",
+      summary:
+        "Proposes a physics-constrained predictive framework to jointly model threshold-voltage distribution mean and sigma under thermal extremes, improving extrapolation reliability.",
+    },
+    {
+      venue: "TED",
+      status: "Submitted",
+      year: "2026",
+      title: "Temperature Compensation Asymmetry in 3D NAND at Thermal Extremes",
+      summary:
+        "Analyzes asymmetric temperature compensation behavior across program states and explains it with state-dependent physical mechanisms observed in cross-temperature experiments.",
+    },
+    {
+      venue: "IPFA",
+      status: "Submitted",
+      year: "2026",
+      title: "State-Dependent Overcompensation in 3D NAND Cross-Temperature Behavior",
+      summary:
+        "Reports new evidence of state-dependent overcompensation and piecewise temperature response, highlighting practical implications for sensing margins and reliability calibration.",
+    },
+  ];
+
   const avatarSrc = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/avatar.jpg`;
 
   return (
@@ -203,19 +238,24 @@ export default function Home() {
               <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
                 Selected Publication
               </h2>
-              <article className="mt-4 rounded-lg border border-stroke bg-white/70 p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-accent">
-                  Project-Corresponding Manuscript | Under Review | 2025
-                </p>
-                <h3 className="mt-2 text-[2rem] font-bold leading-tight text-ink">
-                  Manuscript Supporting the FeFET-TCAM Reliability Project
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-muted">
-                  This manuscript is prepared as the corresponding paper for the
-                  project and is currently under review. Full title and technical
-                  details will be disclosed after publication.
-                </p>
-              </article>
+              <div className="mt-4 space-y-4">
+                {publications.map((paper) => (
+                  <article
+                    key={`${paper.venue}-${paper.title}`}
+                    className="rounded-lg border border-stroke bg-white/70 p-5"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                      {paper.venue} | {paper.status} | {paper.year}
+                    </p>
+                    <h3 className="mt-2 text-[1.75rem] font-bold leading-tight text-ink">
+                      {paper.title}
+                    </h3>
+                    <p className="mt-3 text-base leading-relaxed text-muted">
+                      {paper.summary}
+                    </p>
+                  </article>
+                ))}
+              </div>
             </section>
 
             <section className="mt-7 border-t border-stroke pt-6">

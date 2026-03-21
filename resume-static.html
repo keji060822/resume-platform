@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yicheng Ke - Resume</title>
+    <style>
+      :root {
+        --bg: #f4f6fb;
+        --panel: #ffffff;
+        --text: #17212f;
+        --muted: #546174;
+        --accent: #2f5fa6;
+        --line: #dbe3ef;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(160deg, #edf2fb 0%, #f8fafc 45%, #f2f5fb 100%);
+        color: var(--text);
+        font-family: "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 28px auto;
+        padding: 0 16px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 36px rgba(20, 40, 80, 0.1);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+      }
+
+      .side {
+        border-right: 1px solid var(--line);
+        background: #fcfdff;
+      }
+
+      .section {
+        padding: 22px 24px;
+      }
+
+      .section + .section {
+        border-top: 1px solid var(--line);
+      }
+
+      .avatar {
+        width: 108px;
+        height: 108px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #c6d7f2;
+      }
+
+      h1 {
+        margin: 12px 0 6px;
+        font-size: 44px;
+        line-height: 1.08;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 13px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h3 {
+        margin: 8px 0;
+        font-size: 30px;
+        line-height: 1.18;
+      }
+
+      p,
+      li {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .pill {
+        display: inline-block;
+        border: 1px solid #cddbf0;
+        border-radius: 999px;
+        padding: 4px 10px;
+        margin: 0 8px 8px 0;
+        font-size: 14px;
+      }
+
+      .main {
+        padding: 22px 24px 26px;
+      }
+
+      .main-section {
+        border-top: 1px solid var(--line);
+        padding-top: 20px;
+        margin-top: 20px;
+      }
+
+      .badge {
+        display: inline-block;
+        border: 1px solid #c8d8f0;
+        background: #edf4ff;
+        color: #224d88;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        padding: 5px 10px;
+        text-transform: uppercase;
+      }
+
+      .entry {
+        margin-top: 16px;
+      }
+
+      .period {
+        color: var(--accent);
+        font-weight: 700;
+        margin: 0 0 6px;
+      }
+
+      .pub {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fbfdff;
+        padding: 16px;
+        margin-top: 12px;
+      }
+
+      .pub-meta {
+        margin: 0;
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .pub-title {
+        margin: 8px 0 6px;
+        font-size: 27px;
+        line-height: 1.2;
+      }
+
+      a {
+        color: #1e58aa;
+      }
+
+      @media (max-width: 920px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .side {
+          border-right: none;
+          border-bottom: 1px solid var(--line);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="grid">
+          <aside class="side">
+            <section class="section">
+              <img class="avatar" src="./public/avatar.jpg" alt="Yicheng Ke avatar" />
+              <h1>Yicheng Ke</h1>
+              <p style="margin: 0; font-size: 28px; font-weight: 600">
+                Undergraduate Student in Microelectronics
+              </p>
+              <div class="muted" style="margin-top: 12px">
+                <p style="margin: 0 0 4px">Changsha, Hunan, China</p>
+                <p style="margin: 0 0 4px">18773152670</p>
+                <p style="margin: 0 0 4px">
+                  <a href="mailto:keych@mail2.sysu.edu.cn">keych@mail2.sysu.edu.cn</a>
+                </p>
+                <p style="margin: 0">
+                  <a href="mailto:3330870783@qq.com">3330870783@qq.com</a>
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2>Skills</h2>
+              <span class="pill">Python</span>
+              <span class="pill">C</span>
+              <span class="pill">MATLAB</span>
+              <span class="pill">Verilog-A</span>
+              <span class="pill">Cadence</span>
+              <span class="pill">Monte Carlo Statistical Modeling</span>
+              <span class="pill">Device-Circuit Co-Simulation</span>
+              <span class="pill">Technical Writing (Chinese &amp; English)</span>
+              <span class="pill">PyTorch (Basic)</span>
+            </section>
+
+            <section class="section">
+              <h2>Education</h2>
+              <p style="margin: 0 0 6px; font-weight: 600">
+                B.Eng. in Microelectronics Science and Technology
+              </p>
+              <p class="muted" style="margin: 0 0 4px">
+                Sun Yat-sen University, School of Microelectronics Science and Engineering
+              </p>
+              <p class="muted" style="margin: 0 0 4px">Sep 2024 - Present</p>
+              <p class="muted" style="margin: 0">Major Ranking: 31/156 (Top ~19%)</p>
+            </section>
+
+            <section class="section">
+              <h2>Honors</h2>
+              <p class="muted" style="margin: 0; font-weight: 600">2025</p>
+              <p style="margin: 6px 0 0">
+                Provincial First Prize, National College Mathematical Modeling Contest
+                (Higher Education Cup)
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Research Focus</h2>
+              <ul class="muted" style="margin: 0; padding-left: 22px">
+                <li>Ferroelectric memory device modeling (FeFET/2FeFET)</li>
+                <li>TCAM bit-cell search reliability and failure analysis</li>
+                <li>3D NAND temperature-radiation coupled reliability</li>
+                <li>Cross-scale mapping from device variation to circuit-level behavior</li>
+              </ul>
+            </section>
+          </aside>
+
+          <main class="main">
+            <span class="badge">Open to internships and research opportunities</span>
+            <p class="muted" style="margin-top: 14px">
+              I am a 2024-cohort undergraduate at Sun Yat-sen University focusing on
+              device modeling, reliability analysis, and device-circuit co-simulation for
+              emerging memory technologies.
+            </p>
+
+            <section class="main-section">
+              <h2>Research Experience</h2>
+              <article class="entry">
+                <p class="period">2025 - Present</p>
+                <h3>Student Researcher (First Author) - FeFET-Based TCAM Manuscript</h3>
+                <ul class="muted" style="padding-left: 22px; margin: 8px 0 0">
+                  <li>
+                    Working on a manuscript related to FeFET-based TCAM reliability,
+                    currently under review.
+                  </li>
+                  <li>
+                    Built and tested simulation workflows and supported experiment
+                    analysis.
+                  </li>
+                  <li>Contributed to model updates, figures, and paper writing.</li>
+                </ul>
+              </article>
+
+              <article class="entry">
+                <p class="period">Jul 2025 - Present</p>
+                <h3>Research Participant - Advanced 3D NAND Reliability Project</h3>
+                <ul class="muted" style="padding-left: 22px; margin: 8px 0 0">
+                  <li>Participating in reliability modeling work for advanced 3D NAND devices.</li>
+                  <li>
+                    Assisting with threshold-voltage data analysis across multiple
+                    temperature points.
+                  </li>
+                  <li>Exploring temperature and radiation effects on device behavior.</li>
+                </ul>
+              </article>
+            </section>
+
+            <section class="main-section">
+              <h2>Selected Publication</h2>
+
+              <article class="pub">
+                <p class="pub-meta">TDMR | Under Review | 2025</p>
+                <h3 class="pub-title">FeFET-TCAM Reliability Manuscript</h3>
+                <p class="muted" style="margin: 0">
+                  Corresponding project manuscript focused on reliability behavior in
+                  FeFET-TCAM cells, including model refinement, simulation verification, and
+                  failure-mode analysis.
+                </p>
+              </article>
+
+              <article class="pub">
+                <p class="pub-meta">EDL | Submitted | 2026</p>
+                <h3 class="pub-title">
+                  Physics-Constrained Model for 3D NAND Vth Mean/Sigma at Extreme
+                  Temperatures
+                </h3>
+                <p class="muted" style="margin: 0">
+                  Proposes a physics-constrained predictive framework to jointly model
+                  threshold-voltage distribution mean and sigma under thermal extremes,
+                  improving extrapolation reliability.
+                </p>
+              </article>
+
+              <article class="pub">
+                <p class="pub-meta">TED | Submitted | 2026</p>
+                <h3 class="pub-title">
+                  Temperature Compensation Asymmetry in 3D NAND at Thermal Extremes
+                </h3>
+                <p class="muted" style="margin: 0">
+                  Analyzes asymmetric temperature compensation behavior across program states
+                  and explains it with state-dependent physical mechanisms observed in
+                  cross-temperature experiments.
+                </p>
+              </article>
+
+              <article class="pub">
+                <p class="pub-meta">IPFA | Submitted | 2026</p>
+                <h3 class="pub-title">
+                  State-Dependent Overcompensation in 3D NAND Cross-Temperature Behavior
+                </h3>
+                <p class="muted" style="margin: 0">
+                  Reports new evidence of state-dependent overcompensation and piecewise
+                  temperature response, highlighting practical implications for sensing
+                  margins and reliability calibration.
+                </p>
+              </article>
+            </section>
+
+            <section class="main-section">
+              <h2>Additional Information</h2>
+              <ul class="muted" style="padding-left: 22px; margin: 0">
+                <li>Able to write technical documents in both Chinese and English.</li>
+                <li>
+                  Familiar with Verilog-A model editing and device-circuit co-simulation.
+                </li>
+                <li>Comfortable using Cadence tools for simulation tasks.</li>
+              </ul>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
