@@ -8,8 +8,8 @@
   --color-stroke: #d7deea;
   --color-accent: #1d4ed8;
 
-  --font-manrope: "Manrope", sans-serif;
-  --font-merriweather: "Merriweather", serif;
+  --font-manrope: "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-merriweather: "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
 }
 
 @theme inline {

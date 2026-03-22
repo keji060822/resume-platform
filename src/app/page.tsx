@@ -13,15 +13,16 @@ export default function Home() {
   };
 
   const skills = [
+    "Sentaurus TCAD",
     "Python",
     "C",
+    "Cadence",
+    "PyTorch (Basic)",
     "MATLAB",
     "Verilog-A",
-    "Cadence",
     "Monte Carlo Statistical Modeling",
     "Device-Circuit Co-Simulation",
     "Technical Writing (Chinese & English)",
-    "PyTorch (Basic)",
   ];
 
   const experience = [
@@ -107,7 +108,7 @@ export default function Home() {
   return (
     <div className="mx-auto min-h-screen w-full max-w-6xl px-4 py-8 md:px-8 md:py-10">
       <div className="overflow-hidden rounded-2xl border border-stroke bg-panel shadow-[0_12px_36px_rgba(16,24,40,0.08)]">
-        <div className="grid md:grid-cols-[340px_1fr]">
+        <div className="grid md:grid-cols-[320px_1fr]">
           <aside className="bg-white/70 md:border-r md:border-stroke">
             <section className="p-6 md:p-8">
               <div className="inline-flex rounded-full border-2 border-accent/40 p-1 shadow-sm">
@@ -120,11 +121,11 @@ export default function Home() {
                   priority
                 />
               </div>
-              <h1 className="mt-4 font-serif text-5xl font-bold leading-tight text-ink">
+              <h1 className="mt-4 text-[44px] leading-[1.08] font-bold text-ink">
                 {profile.name}
               </h1>
-              <p className="mt-2 text-xl font-semibold text-ink/90">{profile.role}</p>
-              <div className="mt-4 space-y-1.5 text-sm leading-relaxed text-muted">
+              <p className="mt-2 text-[28px] font-semibold text-ink/90">{profile.role}</p>
+              <div className="mt-4 space-y-1.5 text-[17px] leading-relaxed text-muted">
                 <p>{profile.location}</p>
                 <p>{profile.phone}</p>
                 <a
@@ -143,7 +144,7 @@ export default function Home() {
             </section>
 
             <section className="border-t border-stroke px-6 py-5 md:px-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-muted">
                 Skills
               </h2>
               <ul className="mt-3 flex flex-wrap gap-2">
@@ -159,10 +160,10 @@ export default function Home() {
             </section>
 
             <section className="border-t border-stroke px-6 py-5 md:px-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-muted">
                 Education
               </h2>
-              <div className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted">
+              <div className="mt-3 space-y-1.5 text-[17px] leading-relaxed text-muted">
                 <p className="font-semibold text-ink">
                   B.Eng. in Microelectronics Science and Technology
                 </p>
@@ -176,7 +177,7 @@ export default function Home() {
             </section>
 
             <section className="border-t border-stroke px-6 py-5 md:px-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-muted">
                 Honors
               </h2>
               <ul className="mt-3 space-y-3">
@@ -185,7 +186,7 @@ export default function Home() {
                     <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                       {award.year}
                     </p>
-                    <p className="mt-1 text-sm font-semibold leading-relaxed text-ink">
+                    <p className="mt-1 text-[17px] font-semibold leading-relaxed text-ink">
                       {award.title}
                     </p>
                   </li>
@@ -194,10 +195,10 @@ export default function Home() {
             </section>
 
             <section className="border-t border-stroke px-6 py-5 md:px-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-muted">
                 Research Focus
               </h2>
-              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted">
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[17px] leading-relaxed text-muted">
                 {researchFocus.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -209,22 +210,22 @@ export default function Home() {
             <p className="inline-flex rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               Open to internships and research opportunities
             </p>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
+            <p className="mt-4 max-w-3xl text-[17px] leading-relaxed text-muted">
               {profile.summary}
             </p>
 
             <section className="mt-7 border-t border-stroke pt-6">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-muted">
                 Research Experience
               </h2>
               <div className="mt-4 space-y-6">
                 {experience.map((item) => (
                   <article key={`${item.company}-${item.period}`} className="space-y-2">
-                    <p className="text-sm font-semibold text-accent">{item.period}</p>
-                    <h3 className="text-[2.1rem] font-bold leading-tight text-ink">
+                    <p className="text-[17px] font-semibold text-accent">{item.period}</p>
+                    <h3 className="text-[30px] font-bold leading-[1.18] text-ink">
                       {item.role} - {item.company}
                     </h3>
-                    <ul className="list-disc space-y-1.5 pl-5 text-base leading-relaxed text-muted">
+                    <ul className="list-disc space-y-1.5 pl-5 text-[17px] leading-relaxed text-muted">
                       {item.highlights.map((highlight) => (
                         <li key={highlight}>{highlight}</li>
                       ))}
@@ -235,7 +236,7 @@ export default function Home() {
             </section>
 
             <section className="mt-7 border-t border-stroke pt-6">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-muted">
                 Selected Publication
               </h2>
               <div className="mt-4 space-y-4">
@@ -247,10 +248,10 @@ export default function Home() {
                     <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                       {paper.venue} | {paper.status} | {paper.year}
                     </p>
-                    <h3 className="mt-2 text-[1.75rem] font-bold leading-tight text-ink">
+                    <h3 className="mt-2 text-[27px] font-bold leading-[1.2] text-ink">
                       {paper.title}
                     </h3>
-                    <p className="mt-3 text-base leading-relaxed text-muted">
+                    <p className="mt-3 text-[17px] leading-relaxed text-muted">
                       {paper.summary}
                     </p>
                   </article>
@@ -259,10 +260,10 @@ export default function Home() {
             </section>
 
             <section className="mt-7 border-t border-stroke pt-6">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-muted">
                 Additional Information
               </h2>
-              <ul className="mt-4 list-disc space-y-1.5 pl-5 text-base leading-relaxed text-muted">
+              <ul className="mt-4 list-disc space-y-1.5 pl-5 text-[17px] leading-relaxed text-muted">
                 {extras.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
